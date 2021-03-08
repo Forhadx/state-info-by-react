@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Libre+Barcode+39+Text&display=swap");
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  background-color: #013353;
+  border-bottom: 1px solid white;
+}
+
+header div {
+  padding: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  font-family: "Fascinate", cursive;
+}
+
+aside {
+  left: 0;
+  top: 4rem;
+  bottom: 0;
+  width: 12rem;
+  overflow: auto;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #013353;
+}
+
+aside input {
+  position: fixed;
+  top: 4rem;
+  left: 0.4rem;
+  width: 9.5rem;
+  font-size: 1.2rem;
+
+  border: 0.2rem solid white;
+  border-radius: 0.4rem;
+}
+.all-C-name{
+    margin-top: 2.5rem;
+}
+.C-name {
+  margin: auto;
+  width: 90%;
+  border: 1px solid white;
+  color: white;
+  padding: 0.3rem 0;
+  margin-bottom: 0.5rem;
+  background-color: #0573ac;
+}
+.C-name:focus{
+    outline: none;
+}
+.C-name:hover{
+    background-color: #034668;
+}
+
+main {
+  padding-left: 12rem;
+}
+.coutry-name {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 0.4rem 0.4rem rgb(177, 175, 175);
+  box-sizing: border-box;
+}
+
+.coutry-name .name {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(101, 150, 241);
+  color: white;
+}
+
+.coutry-name img {
+  width: 50%;
+}
+
+.description {
+  margin: auto;
+  margin-top: 2rem;
+  width: 90%;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  color: white;
+  background-color: #f39ed5;
+  box-shadow: 0 0 0.2rem 0.2rem #c9c3c7;
+  font-weight: 500;
+}
+
+.details {
+  margin: auto;
+  margin-top: 2rem;
+  width: 70%;
+}
+
+.detail-row {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #9be6b4;
+}
+
+.detail-row h2 {
+  width: 40%;
+  padding: 0.5rem;
+  color: #e211c6;
+  background-color: white;
+  border: 1px solid rgb(180, 177, 177);
+  overflow: auto;
+  font-size: 1.2rem;
+}
+
+.religion-row {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #9be6b4;
+}
+
+.religion-row h2 {
+  width: 40%;
+  padding: 0.5rem;
+  color: #e211c6;
+  background-color: white;
+  border: 1px solid rgb(180, 177, 177);
+  overflow: auto;
+  font-size: 1.2rem;
+}
+
+.religion-row div {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.religion-row div h2 {
+  width: 100%;
+  padding: 0.5rem;
+  color: #e211c6;
+  background-color: white;
+  border: 1px solid rgb(180, 177, 177);
+  overflow: auto;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 1.2rem;
+}
+.religion-row div h2:last-child {
+  margin-bottom: 1rem;
+}
+
+.images {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #010D25;
+  
+}
+
+.images img {
+  margin: 1rem;
+  width: 30rem;
+}
+
+.map {
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.map iframe {
+  margin: 0;
+  width: 100%;
+  height: 25rem;
+  box-sizing: border-box;
+}

@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Libre+Barcode+39+Text&display=swap");
 
+.admin-panel{
+  margin-top: 6rem;
+}
+
 .form-header {
   text-align: center;
   height: 5rem;
@@ -21,14 +25,83 @@
 font-family: 'Oi', cursive;
 */
 
-.form {
-  border: 1px solid black;
+form {
   margin: auto;
-  width: 50%;
-  height: 100vh;
+  margin-bottom: 5rem;
+  width: 40rem;
   box-sizing: border-box;
-
+  padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   text-align: left;
+  box-shadow: 0 0 0.2rem 0.2rem rgb(211, 202, 202);
+}
+
+form .input-div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.input-amount{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 10rem;
+  margin-top: .5rem;
+}
+
+
+.input-amount div{  
+  width: 5rem;
+  text-align: center;
+  margin-right: 1rem;
+  padding: .3rem;
+  border-radius: .2rem;
+}
+
+.btn{
+  background-color: rgb(124, 13, 199);
+  color: white;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: rgb(61, 3, 97);
+}
+
+.result{
+  background-color: white;
+  border: .1rem solid rgb(77, 0, 128);
+}
+
+label{
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  color: rgb(5, 5, 126);
+  font-weight: bold;
+}
+input{
+  padding: .3rem 1rem;
+  font-size: 1.2rem;
+}
+
+textarea{
+  padding: .3rem 1rem;
+  font-size: 1.2rem;
+  height: 5rem;
+}
+
+button{
+  padding: .5rem;
+  background-color: rgb(16, 180, 16);
+  color: white;
+  font-size: 1.2rem;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:hover{
+  background-color: rgb(2, 109, 2) ;
 }

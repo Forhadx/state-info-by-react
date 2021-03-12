@@ -47,16 +47,16 @@ const AdminPanel = () => {
       )
       .then((res) => {
         console.log(res);
-        setName('');
-        setFlag('');
-        setDescription('');
-        setCapital('');
-        setLanguage('');
-        setArea('');
-        setPopulation('');
-        setGdp('');
-        setCurrency('');
-        setMap('');
+        setName("");
+        setFlag("");
+        setDescription("");
+        setCapital("");
+        setLanguage("");
+        setArea("");
+        setPopulation("");
+        setGdp("");
+        setCurrency("");
+        setMap("");
         setReligionArr([]);
         setImgArr([]);
       });
@@ -74,101 +74,141 @@ const AdminPanel = () => {
   };
 
   return (
-    <div>
+    <div className="admin-panel">
       <header className="form-header">
         <div>STATE INFO</div>
       </header>
+      <h1>Admin Panel (Input Country Data)</h1>
       <form className="form" onSubmit={submitHandler}>
-        <label>Country Name</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-
-        <label>Country Flag Url Link</label>
-        <input
-          type="text"
-          value={flag}
-          onChange={(e) => setFlag(e.target.value)}
-        />
-
-        <label>Describe the Country</label>
-        <textarea
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
-
-        <label> Capital</label>
-        <input
-          type="text"
-          value={capital}
-          onChange={(e) => setCapital(e.target.value)}
-        />
-
-        <label>Official language</label>
-        <input
-          type="text"
-          value={language}
-          onChange={(e) => setLanguage(e.target.value)}
-        />
-
-        <label>Religion 4/5 </label>
-        <input
-          type="text"
-          value={religion}
-          onChange={(e) => setReligion(e.target.value)}
-        />
-        <div>
-          <div onClick={religion ? allReligionHandler : null}>ADD</div>
-          <div>{religionArr.length}</div>
+        <div className="input-div">
+          <label>Country Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            spellcheck="true"
+            required
+          />
         </div>
 
-        <label>Area (Km)</label>
-        <input
-          type="number"
-          value={area}
-          onChange={(e) => setArea(e.target.value)}
-        />
+        <div className="input-div">
+          <label>Country Flag Url Link</label>
+          <input
+            type="text"
+            value={flag}
+            onChange={(e) => setFlag(e.target.value)}
+            required
+          />
+        </div>
 
-        <label>Population</label>
-        <input
-          type="number"
-          value={population}
-          onChange={(e) => setPopulation(e.target.value)}
-        />
+        <div className="input-div">
+          <label>Describe the Country</label>
+          <textarea
+            type="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            spellcheck="true"
+            required
+          ></textarea>
+        </div>
 
-        <label>GDP (PPP)</label>
-        <input
-          type="number"
-          value={gdp}
-          onChange={(e) => setGdp(e.target.value)}
-        />
+        <div className="input-div">
+          <label>Capital</label>
+          <input
+            type="text"
+            value={capital}
+            onChange={(e) => setCapital(e.target.value)}
+            spellcheck="true"
+            required
+          />
+        </div>
 
-        <label>Currency</label>
-        <input
-          type="text"
-          value={currency}
-          onChange={(e) => setCurrency(e.target.value)}
-        />
+        <div className="input-div">
+          <label>Language</label>
+          <input
+            type="text"
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            spellcheck="true"
+            required
+          />
+        </div>
 
-        <label>Map iframe src link</label>
-        <input
-          type="text"
-          value={map}
-          onChange={(e) => setMap(e.target.value)}
-        />
+        <div className="input-div">
+          <label>Religion </label>
+          <input
+            type="text"
+            value={religion}
+            onChange={(e) => setReligion(e.target.value)}
+            spellcheck="true"
+          />
+          <div className="input-amount">
+            <div className="btn" onClick={religion ? allReligionHandler : null}>ADD</div>
+            <div className="result">{religionArr.length}</div>
+          </div>
+        </div>
 
-        <label>Add Pictures</label>
-        <input
-          type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-        <div>
-         <div onClick={image ? allImagesHandler : null}>ADD</div>
-          <div>{imgArr.length}</div>
+        <div className="input-div">
+          <label>Area (Km)</label>
+          <input
+            type="text"
+            value={area}
+            onChange={(e) => setArea(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="input-div">
+          <label>Population</label>
+          <input
+            type="text"
+            value={population}
+            onChange={(e) => setPopulation(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="input-div">
+          <label>GDP (PPP)</label>
+          <input
+            type="text"
+            value={gdp}
+            onChange={(e) => setGdp(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="input-div">
+          <label>Currency</label>
+          <input
+            type="text"
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="input-div">
+          <label>Map iframe src link</label>
+          <input
+            type="text"
+            value={map}
+            onChange={(e) => setMap(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="input-div">
+          <label>Add Pictures</label>
+          <input
+            type="text"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          />
+          <div className="input-amount">
+            <div className="btn" onClick={image ? allImagesHandler : null}>ADD</div>
+            <div className="result" >{imgArr.length}</div>
+          </div>
         </div>
 
         <button type="submit">submit</button>

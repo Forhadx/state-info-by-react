@@ -1,19 +1,20 @@
-import React from 'react';
-import AdminPanel from './AdminPanel/AdmintPanel';
-import StatePage from './StatePage/StatePage';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
+import AdminPanel from "./AdminPanel/AdmintPanel";
+import StatePage from "./StatePage/StatePage";
 
-import './App.css';
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <StatePage />
+      <Switch>
+        <Route path="/admin" component={AdminPanel} />
+        <Route path="/" component={StatePage} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
-
-
-// <AdminPanel />

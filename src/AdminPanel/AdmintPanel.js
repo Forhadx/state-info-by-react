@@ -86,7 +86,7 @@ const AdminPanel = () => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            spellCheck="true"
+            spellC heck="true"
             required
           />
         </div>
@@ -107,7 +107,7 @@ const AdminPanel = () => {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            spellCheck="true"
+            spellC heck="true"
             required
           ></textarea>
         </div>
@@ -118,7 +118,7 @@ const AdminPanel = () => {
             type="text"
             value={capital}
             onChange={(e) => setCapital(e.target.value)}
-            spellCheck="true"
+            spellC heck="true"
             required
           />
         </div>
@@ -129,7 +129,7 @@ const AdminPanel = () => {
             type="text"
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-            spellCheck="true"
+            spellC heck="true"
             required
           />
         </div>
@@ -140,7 +140,7 @@ const AdminPanel = () => {
             type="text"
             value={religion}
             onChange={(e) => setReligion(e.target.value)}
-            spellCheck="true"
+            spellC heck="true"
           />
           <div className="input-amount">
             <div className="btn" onClick={religion ? allReligionHandler : null}>ADD</div>

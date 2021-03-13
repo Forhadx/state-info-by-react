@@ -23,7 +23,7 @@ const Details = React.memo(props => {
           <h2>{c.capital}</h2>
         </div>
         <div className="detail-row">
-          <h2>Official language</h2>
+          <h2>Language</h2>
           <h2>{c.language}</h2>
           
         </div>

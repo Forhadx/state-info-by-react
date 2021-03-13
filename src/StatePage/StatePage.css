@@ -10,35 +10,62 @@ header {
   border-bottom: 1px solid white;
 }
 
-header div {
+header .state-info {
   padding: 0.5rem;
   color: white;
   font-size: 2rem;
   font-family: "Fascinate", cursive;
 }
 
-aside {
+.container {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.sidebar {
+  border-top: 1px solid white;
+  display: none;
   left: 0;
   top: 4rem;
   bottom: 0;
-  width: 12rem;
+  width: 100%;
   overflow: auto;
   position: fixed;
   box-sizing: border-box;
   background-color: #013353;
+  z-index: 200;
+  transition: transform 0.3s ease-out;
 }
 
-aside input {
-  position: fixed;
-  top: 4rem;
-  left: 0.5rem;
-  width: 7.5rem;
+.Open {
+  display: block;
+  transform: translateX(0);
+}
+
+.Close {
+  display: none;
+}
+
+.sidebar input {
+  margin: auto;
+  width: 85%;
+  margin-top: 1rem;
   font-size: 1.2rem;
   border: 0.2rem solid white;
 }
 
-.all-C-name{
-    margin-top: 3.5rem;
+.all-C-name {
+  margin-top: 1.5rem;
 }
 .C-name {
   margin: auto;
@@ -49,43 +76,44 @@ aside input {
   margin-bottom: 0.5rem;
   background-color: #0573ac;
 }
-.C-name:focus{
-    outline: none;
+.C-name:focus {
+  outline: none;
 }
-.C-name:hover{
-    background-color: #034668;
+.C-name:hover {
+  background-color: #034668;
 }
 
-main {
-  padding-left: 12rem;
+.main {
+  margin: auto;
   margin-top: 4.4rem;
 }
 
 .coutry-name {
-  margin: 0 .4rem;
+  margin: auto;
   width: 100%;
   height: 50vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   box-shadow: 0 0 0.4rem 0.4rem rgb(177, 175, 175);
   box-sizing: border-box;
 }
 
 .coutry-name .name {
   text-align: center;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color:  #B0E57C;
-  color: rgb(255, 66, 9);
-  font-size: 4rem;
+  background-color: #FCFC99;
+  color: rgb(49, 46, 46);
+  font-size: 1.5rem;
 }
 
 .coutry-name img {
-  width: 50%;
+  width: 100%;
+  height: 50%;
 }
 
 .description {
@@ -104,7 +132,7 @@ main {
 .details {
   margin: auto;
   margin-top: 2rem;
-  width: 70%;
+  width: 90%;
 }
 
 .detail-row {
@@ -154,7 +182,7 @@ main {
   width: 100%;
   padding: 0.5rem;
   color: #e211c6;
-  background-color:rgb(241, 241, 241);
+  background-color: rgb(241, 241, 241);
   border: 1px solid rgb(180, 177, 177);
   overflow: auto;
   margin-bottom: 0;
@@ -167,18 +195,19 @@ main {
 }
 
 .images {
-  margin: auto;
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #010D25;
-  
+  background-color: #010d25;
 }
 
 .images img {
-  margin: 1rem;
-  width: 30rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 90%;
 }
 
 .map {
@@ -192,4 +221,102 @@ main {
   width: 100%;
   height: 25rem;
   box-sizing: border-box;
+}
+
+@media (min-width: 45rem) and (max-width: 80rem) {
+  .container{
+    display: none;
+  }
+  .sidebar {
+    display: block;
+    width: 12rem;
+  }
+
+  .sidebar input {
+    position: fixed;
+    top: 4rem;
+    left: 0.5rem;
+    width: 7.5rem;
+  }
+
+  .all-C-name {
+    margin-top: 4.5rem;
+  }
+
+  .main {
+    padding-left: 12rem;
+  }
+
+  .coutry-name {
+    height: 60vh;
+  }
+
+  .coutry-name .name {
+    height: 40%;
+  }
+
+  .coutry-name img {
+    height: 60%;
+  }
+  .images img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .container{
+    display: none;
+  }
+  
+  .sidebar {
+    display: block;
+    width: 12rem;
+  }
+
+  .sidebar input {
+    position: fixed;
+    top: 4rem;
+    left: 0.5rem;
+    width: 7.5rem;
+  }
+
+  .all-C-name {
+    margin-top: 4.5rem;
+  }
+
+  .main {
+    padding-left: 12rem;
+  }
+
+  .coutry-name {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .coutry-name .name {
+    width: 50%;
+    height: 50vh;
+  }
+
+  .coutry-name img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .images {
+    width: 100%;
+    flex-direction: row;
+  }
+  .images img {
+    width: 30%;
+  }
+}
+
+
+.admin{
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  background-color: red;
+  color: white;
 }

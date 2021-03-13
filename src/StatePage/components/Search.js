@@ -13,7 +13,7 @@ const Search = (props) => {
             axios
             .get("https://state-info-by-react-default-rtdb.firebaseio.com/items.json" + query)
             .then((res) => {
-              console.log(res.data);
+              //console.log(res.data);
               const fetchData = [];
               for (let key in res.data) {
                 fetchData.push({
